@@ -1,0 +1,8 @@
+1717538946407	Rename package 'com.tkzi.monitoramento'
+1717538965955	Rename type 'MonitoramentoSpringApplication'
+1717540539780	Move compilation unit
+1717540761260	Rename type 'CircuitBreakerLongConfig'
+1717540852769	Rename resource 'application.properties'
+1717550281148	Rename resource 'application.yml'
+1717550315926	Rename resource 'prometheus.yml'
+1717550647101	Delete element

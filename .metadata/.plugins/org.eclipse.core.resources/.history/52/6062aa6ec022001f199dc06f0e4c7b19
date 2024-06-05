@@ -1,0 +1,5 @@
+package com.tkzi.produto.infra.database;
+
+public class ProdutoRepositoryImpl {
+
+}

@@ -1,0 +1,37 @@
+package com.tkzi.produto;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import ch.qos.logback.classic.Logger;
+
+@Configuration
+public class CircuitBreakerLongConfig {
+	
+	 private final Logger logger = LoggerFactory.getLogger(CircuitBreakerLogConfig.class);
+
+	    @Bean
+	    public RegistryEventConsumer<CircuitBreaker> cbLog() {
+	        return new RegistryEventConsumer<CircuitBreaker>() {
+	            @Override
+	            public void onEntryAddedEvent(EntryAddedEvent<CircuitBreaker> entryAddedEvent) {
+	                entryAddedEvent.getAddedEntry()
+	                        .getEventPublisher()
+	                        .onStateTransition(event -> {
+	                            logger.info(event.toString());
+	                        });
+	            }
+
+	            @Override
+	            public void onEntryRemovedEvent(EntryRemovedEvent<CircuitBreaker> entryRemoveEvent) {
+
+	            }
+
+	            @Override
+	            public void onEntryReplacedEvent(EntryReplacedEvent<CircuitBreaker> entryReplacedEvent) {
+
+	            }
+	        };
+	    }
+
+}

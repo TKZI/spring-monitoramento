@@ -1,0 +1,5 @@
+package com.tkzi.produto.client.avaliacoes;
+
+public class AvaliacaoClient {
+
+}

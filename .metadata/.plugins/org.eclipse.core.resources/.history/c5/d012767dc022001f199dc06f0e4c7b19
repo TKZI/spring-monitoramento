@@ -1,0 +1,5 @@
+package com.tkzi.produto.domain;
+
+public interface ProdutoRepository {
+
+}

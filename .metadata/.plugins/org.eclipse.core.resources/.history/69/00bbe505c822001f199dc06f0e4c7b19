@@ -1,0 +1,5 @@
+package com.tkzi.avaliacao.domain;
+
+public class Avaliacao {
+
+}

@@ -1,0 +1,21 @@
+global:
+  scrape_interval: "5s"
+  scrape_timeout: "5s"
+  evaluation_interval: "1m"
+  
+scrape_configs:
+  - job_name: "api-produtos-job"
+    metrics_path: /actuator/prometheus
+    honor_labels: false
+    honor_timestamps: true
+    scheme: http
+    follow_redirects: true
+    body_size_limit: 0
+    sample_limit: 0
+    label_limit: 0
+    label_name_length_limit: 0
+    label_value_length_limit: 0
+    target_limit: 0
+    static_configs:
+      - targets: ["host.docker.internal:8080"]
+      

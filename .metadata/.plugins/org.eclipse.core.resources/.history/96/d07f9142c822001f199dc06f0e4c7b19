@@ -1,0 +1,5 @@
+package com.tkzi.avaliacao.infra.database;
+
+public class AvaliacaoRepositoryImpl {
+
+}
